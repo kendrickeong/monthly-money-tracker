@@ -1,0 +1,7 @@
+{
+  "name": "monthly-money-tracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
