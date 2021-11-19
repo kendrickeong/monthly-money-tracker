@@ -1,0 +1,33 @@
+
+<ion-toolbar>
+  <ion-title>Add Money Out</ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)="dismiss()">Close</ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header lines="full">
+      <ion-label>
+        Money Out Information
+      </ion-label>
+    </ion-list-header>
+    
+    <form [formGroup]="formGroup">
+      <ion-item>
+        <ion-label position="stacked">Date</ion-label>
+        <ion-datetime [value]="defaultDate" placeholder="Select Date"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Amount</ion-label>
+        <ion-input formControlName="amount"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Description</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+      <ion-button expand="block" fill="outline" (click)="submitForm()">Add Money Out</ion-button>
+    </form>
+  </ion-list>
+</ion-content>
